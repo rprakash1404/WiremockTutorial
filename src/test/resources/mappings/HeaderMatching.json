@@ -1,0 +1,44 @@
+{
+	"mappings": [
+		{
+			"request": {
+				"url": "/demo-get-endpoint",
+				"headers": {
+					"Content-Type": {
+						"equalTo": "application/json; charset=UTF-8"
+					}
+				},
+				"method": "GET"
+			},
+			"response": {
+				"status": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"jsonBody": {
+					"message": "matched to request header"
+				}
+			}
+		},
+		{
+			"request": {
+				"url": "/demo-get-endpoint",
+				"headers": {
+					"Content-Type": {
+						"equalTo": "text/plain; charset=ISO-8859-1"
+					}
+				},
+				"method": "GET"
+			},
+			"response": {
+				"status": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"jsonBody": {
+					"message": "matched to different header"
+				}
+			}
+		}
+	]
+}

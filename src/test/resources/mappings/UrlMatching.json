@@ -1,0 +1,34 @@
+{
+	"mappings": [
+		{
+			"request": {
+				"urlPathPattern": "/demo-urlMatching/([a-z]*)",
+				"method": "GET"
+			},
+			"response": {
+				"status": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"jsonBody": {
+					"message": "matched to url regex"
+				}
+			}
+		},
+		{
+			"request": {
+				"urlPattern": "/demo-urlMatching",
+				"method": "GET"
+			},
+			"response": {
+				"status": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"jsonBody": {
+					"message": "matched to exact url"
+				}
+			}
+		}
+	]
+}
